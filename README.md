@@ -9,11 +9,17 @@ viewer for manual control and visual state updates.
 From this directory:
 
 ```bash
-python3 -m pip install -r requirements.txt
 python3 -m pip install -e .
 ```
 
-The simulator package has no OpenAI or agent dependency.
+The installable distribution is named `shrdlu-block-world`. The Python import
+package is still named `shrdlu_blocks`:
+
+```bash
+python3 -m pip install "shrdlu-block-world @ file:///path/to/shrdlu-block-world"
+```
+
+The simulator package has no third-party, OpenAI, or agent dependency.
 
 ## In-Process API
 
