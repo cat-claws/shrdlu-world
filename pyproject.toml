@@ -17,6 +17,9 @@ classifiers = [
   "Programming Language :: Python :: 3 :: Only",
 ]
 
+[project.scripts]
+shrdlu-simulator = "shrdlu_blocks.simulator.demo:demo"
+
 [project.urls]
 Homepage = "https://github.com/cat-claws/shrdlu-world"
 

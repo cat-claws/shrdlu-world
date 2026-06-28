@@ -20,9 +20,15 @@ python -m pip install -e .
 
 ```bash
 # Browser viewer at http://127.0.0.1:18123/
+shrdlu-simulator
+
+# Equivalent module entrypoint
 python3 -m shrdlu_blocks.simulator
 
 # API only
+shrdlu-simulator --headless
+
+# Equivalent module entrypoint
 python3 -m shrdlu_blocks.simulator --headless
 ```
 
