@@ -15,7 +15,7 @@ from shrdlu_blocks.simulator.env import ShrdluBlocksEnv
 LOGGER = logging.getLogger(__name__)
 
 DEFAULT_SIMULATOR_HOST = '0.0.0.0'
-DEFAULT_SIMULATOR_PORT = 8000
+DEFAULT_SIMULATOR_PORT = 18123
 
 __all__ = [
     'DEFAULT_SIMULATOR_HOST',

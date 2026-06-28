@@ -11,7 +11,7 @@ from shrdlu_blocks.simulator.env import ShrdluBlocksEnv
 __all__ = ['DEFAULT_SIMULATOR_URL', 'ShrdluBlocksClient']
 
 
-DEFAULT_SIMULATOR_URL = 'http://127.0.0.1:8000'
+DEFAULT_SIMULATOR_URL = 'http://127.0.0.1:18123'
 
 
 class ShrdluBlocksClient:

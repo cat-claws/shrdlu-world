@@ -3,24 +3,16 @@
 Small standalone tabletop blocks-world simulator. It can run as a Python object,
 a headless HTTP service, or a browser viewer for manual control.
 
-The distribution name is `shrdlu-block-world`; the import package is
-`shrdlu_blocks`. It has no third-party runtime dependencies.
-
-## Install
-
-```bash
-cd ~/shrdlu-block-world
-python3 -m pip install -e .
-```
-
 ## Run
 
 ```bash
-# Browser viewer at http://127.0.0.1:8000/
-shrdlu-block-world
+cd ~/shrdlu-block-world
+
+# Browser viewer at http://127.0.0.1:18123/
+python3 -m shrdlu_blocks.simulator
 
 # API only
-shrdlu-block-world --headless
+python3 -m shrdlu_blocks.simulator --headless
 ```
 
 Useful options:
@@ -28,12 +20,6 @@ Useful options:
 - `--host HOST`
 - `--port PORT`
 - `--open-browser`
-
-You can also run the module directly:
-
-```bash
-python3 -m shrdlu_blocks.simulator
-```
 
 ## Python API
 
@@ -77,14 +63,14 @@ Supported action names:
 
 ```bash
 export SHRDLU_SIMULATOR_HOST=0.0.0.0
-export SHRDLU_SIMULATOR_PORT=8000
+export SHRDLU_SIMULATOR_PORT=18123
 export SHRDLU_WEB_OPEN_BROWSER=1
 ```
 
-For remote use, forward the viewer port and open `http://localhost:8000`:
+For remote use, forward the viewer port and open `http://localhost:18123`:
 
 ```bash
-ssh -L 8000:localhost:8000 user@remote-host
+ssh -L 18123:localhost:18123 user@remote-host
 ```
 
 ## Layout
