@@ -3,11 +3,22 @@
 Small standalone tabletop blocks-world simulator. It can run as a Python object,
 a headless HTTP service, or a browser viewer for manual control.
 
-## Run
+## Install
+
+```bash
+pip install shrdlu-block-world
+```
+
+For local development:
 
 ```bash
 cd ~/shrdlu-block-world
+python -m pip install -e .
+```
 
+## Run
+
+```bash
 # Browser viewer at http://127.0.0.1:18123/
 python3 -m shrdlu_blocks.simulator
 
@@ -20,6 +31,27 @@ Useful options:
 - `--host HOST`
 - `--port PORT`
 - `--open-browser`
+
+## Interface
+
+Running `python3 -m shrdlu_blocks.simulator` starts a small browser UI for
+manual control of the scene.
+
+![Browser interface](docs/readme-interface.png)
+
+The viewer includes:
+
+- a central canvas showing the current blocks-world scene
+- `Select` and `Move` modes for interacting with objects in the canvas
+- zoom controls and a reset button in the top bar
+- direct `x` and `y` inputs for `move_grasper`
+- buttons for `raise_grasper`, `lower_grasper`, `open_grasper`, and `close_grasper`
+- an object list for selecting the active object
+- highlight and unhighlight controls for the selected object
+- an event log showing recent actions and simulator responses
+
+This UI is served from the same HTTP server as the JSON API, so the browser
+viewer and programmatic API stay in sync.
 
 ## Python API
 

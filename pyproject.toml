@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shrdlu-block-world"
+version = "0.1.0"
+description = "Small standalone tabletop blocks-world simulator."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "cat-claws" },
+]
+classifiers = [
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.urls]
+Homepage = "https://github.com/cat-claws/shrdlu-block-world"
+
+[tool.setuptools.packages.find]
+include = ["shrdlu_blocks*"]
+
+[tool.setuptools.package-data]
+shrdlu_blocks = ["viewer/web_static/*"]
